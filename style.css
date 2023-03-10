@@ -16,6 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 50%;
 }
 .meme-title{
     width: 80%;
@@ -27,57 +28,55 @@ body{
     line-height: 2em;
     color:black;
     border-bottom: 1px solid pink;
+    background-image: url('./img/plus-30.png');
+    background-repeat: no-repeat;
+    background-position:100%;
 }
-
+.meme{
+    display: block;
+    width: 80%;
+    height: 0%;
+    border-bottom: 1px solid pink;
+}
+.meme > img{
+    width: 80%;
+    height: 0;
+}
 .meme-title:hover{
     color:red;
     border:none;
-}
-.plus{
-    width: 2rem;
-    height: 2rem;
-    background-image: url('./img/plus-30.png');
-    background-repeat: no-repeat;
-
-}
-.meme-title:hover + .plus{
-    width: 2rem;
-    height: 2rem;
     background-image:url('./img/plus-30-red.png');
 }
-.meme-title:hover ~ .meme{
-    display:block;
+
+.meme-title:hover ~ .meme >img{
+    height: 100%;
 }
 .meme-title:active{
     color: red;
-    background-image: url('./img/plus-30-rotate.png');
-    background-repeat: no-repeat;
-    background-position:100%;
     border: none;
+    background-image:url('./img/plus-30-rotate.png');
 }
 
 .meme-input{
     appearance: none;
 }
-.meme-input:checked ~ .meme{
-    display: block;
-}
-.meme-input:checked + .meme-title{
+
+
+.meme-input:checked ~ .meme-title{
     color: red;
-    background-image: url('./img/plus-30-rotate.png');
-    background-repeat: no-repeat;
     background-position:100%;
     border: none;
+    background-image:url('./img/plus-30-rotate.png');
 }
-.meme{
-    display: none;
-    width: 80%;
-    border-bottom: 1px solid pink;
+
+
+.meme-input:checked ~ .meme{
+    height: 100%;
 }
-.meme-pic{
-    width: 80%;
-    margin: 3% 10%;
+.meme-input:checked ~ .meme-item{
+    height: 50vh;
 }
+
 
 @media ( max-width: 1180px) and (min-width: 821px){
     .container{
