@@ -26,18 +26,24 @@ body{
     font-weight: 500;
     line-height: 2em;
     color:black;
-    background-image: url('./img/plus-30.png');
-    background-repeat: no-repeat;
-    background-position:100%;
     border-bottom: 1px solid pink;
 }
 
 .meme-title:hover{
     color:red;
-    background-image: url('./img/plus-30-red.png');
-    background-repeat: no-repeat;
-    background-position: 100%;
     border:none;
+}
+.plus{
+    width: 2rem;
+    height: 2rem;
+    background-image: url('./img/plus-30.png');
+    background-repeat: no-repeat;
+
+}
+.meme-title:hover + .plus{
+    width: 2rem;
+    height: 2rem;
+    background-image:url('./img/plus-30-red.png');
 }
 .meme-title:hover ~ .meme{
     display:block;
@@ -56,7 +62,7 @@ body{
 .meme-input:checked ~ .meme{
     display: block;
 }
-.meme-input:checked ~s.meme-title{
+.meme-input:checked + .meme-title{
     color: red;
     background-image: url('./img/plus-30-rotate.png');
     background-repeat: no-repeat;
