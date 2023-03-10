@@ -28,13 +28,20 @@ body{
     color:black;
     background-image: url('./img/plus-30.png');
     background-repeat: no-repeat;
-    background-position: 100%;
+    background-position:100%;
 }
+
 .meme-title:hover{
     color:red;
     background-image: url('./img/plus-30-red.png');
     background-repeat: no-repeat;
     background-position: 100%;
+}
+.meme-title:active{
+    color: red;
+    background-image: url('./img/plus-30-rotate.png');
+    background-repeat: no-repeat;
+    background-position:100%;
 }
 .plus{
     width: 5%;
