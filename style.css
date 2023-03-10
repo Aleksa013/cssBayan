@@ -3,7 +3,7 @@ body{
 }
 .container{
     margin: 5% auto;
-    max-width: 568px;
+    width: 100%;
     background-color: bisque;
 }
 .header{
@@ -29,6 +29,7 @@ body{
     background-image: url('./img/plus-30.png');
     background-repeat: no-repeat;
     background-position:100%;
+    border-bottom: 1px solid pink;
 }
 
 .meme-title:hover{
@@ -36,27 +37,85 @@ body{
     background-image: url('./img/plus-30-red.png');
     background-repeat: no-repeat;
     background-position: 100%;
+    border:none;
 }
 .meme-title:active{
     color: red;
     background-image: url('./img/plus-30-rotate.png');
     background-repeat: no-repeat;
     background-position:100%;
+    border: none;
 }
-.plus{
-    width: 5%;
-}
+
 .meme-input{
     appearance: none;
 }
-.meme-input:checked + .meme{
+.meme-input:checked ~ .meme{
     display: block;
+}
+.meme-input:checked + .meme-title{
+    color: red;
+    background-image: url('./img/plus-30-rotate.png');
+    background-repeat: no-repeat;
+    background-position:100%;
+    border: none;
 }
 .meme{
     display: none;
     width: 80%;
+    border-bottom: 1px solid pink;
 }
 .meme-pic{
     width: 80%;
     margin: 3% 10%;
+}
+
+@media ( max-width: 1180px) and (min-width: 821px){
+    .container{
+        width: 100%;
+    }
+    .header{
+        text-align: center;
+        font-size: 3em;
+        line-height: 4em;
+        font-weight: 500;
+     }
+
+    .meme-title{
+        font-size: 2em;
+        font-weight: 300;
+        line-height: 2em;
+    }
+    .meme{
+        width: 60%;
+     }
+    .meme-pic{
+        width: 70%;
+     }
+}
+
+@media (min-width:1181px) and( max-width: 1920px){
+    .container{
+     width: 100%;
+    }
+    .header{
+        text-align: center;
+        font-size: 3em;
+        line-height: 4em;
+        font-weight: 500;
+     }
+    .meme{
+        width: 50%;
+     }
+    .meme-pic{
+        width: 60%;
+     }
+    .meme-title{
+        font-size: 2em;
+        font-weight: 300;
+        line-height: 2em;
+    }
+    .meme-title:hover{
+        cursor:pointer;
+    }
 }
