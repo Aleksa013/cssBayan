@@ -39,6 +39,9 @@ body{
     background-position: 100%;
     border:none;
 }
+.meme-title:hover ~ .meme{
+    display:block;
+}
 .meme-title:active{
     color: red;
     background-image: url('./img/plus-30-rotate.png');
@@ -53,7 +56,7 @@ body{
 .meme-input:checked ~ .meme{
     display: block;
 }
-.meme-input:checked + .meme-title{
+.meme-input:checked ~s.meme-title{
     color: red;
     background-image: url('./img/plus-30-rotate.png');
     background-repeat: no-repeat;
@@ -94,7 +97,7 @@ body{
      }
 }
 
-@media (min-width:1181px) and( max-width: 1920px){
+@media ( max-width: 1920px) and (min-width: 1181px){
     .container{
      width: 100%;
     }
