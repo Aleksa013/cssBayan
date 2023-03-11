@@ -39,7 +39,7 @@ body{
     height: 0%;
     border-bottom: 1px solid pink;
 }
-.meme > img{
+.meme > .meme-pic {
     margin-bottom: 5%;
     width: 80%;
     height: 0;
@@ -66,19 +66,22 @@ body{
 .meme-input{
     appearance: none;
 }
+:is(.meme-item):has(.meme-input:checked ){
+    height: 80vh; 
+}
 .meme-input:checked ~ .meme-title{
     color: red;
     background-position:100%;
     border: none;
     background-image:url('./img/plus-30-rotate.png');
 }
+.meme-input:checked ~ .meme{
+    height: 70vh;
+}
 .meme-input:checked ~ .meme > .meme-pic{
     height: 100%;
 }
-.meme-input:checked ~ .meme-item:has(.meme-title){
-    height: 50vh;
-    border:1px solid black;
-}
+
 
 
 @media ( max-width: 1180px) and (min-width: 821px){
