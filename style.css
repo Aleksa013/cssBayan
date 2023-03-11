@@ -16,7 +16,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50%;
+    height: 20vh;
 }
 .meme-title{
     width: 80%;
@@ -33,12 +33,14 @@ body{
     background-position:100%;
 }
 .meme{
+    padding-bottom: 3%;
     display: block;
-    width: 80%;
+    width: 35%;
     height: 0%;
     border-bottom: 1px solid pink;
 }
 .meme > img{
+    margin-bottom: 5%;
     width: 80%;
     height: 0;
 }
@@ -47,8 +49,13 @@ body{
     border:none;
     background-image:url('./img/plus-30-red.png');
 }
-
-.meme-title:hover ~ .meme >img{
+.meme-item:hover{
+    height: 80vh;
+}
+.meme-item:hover >.meme{
+    height: 70vh;
+}
+.meme-item:hover > .meme > .meme-pic{
     height: 100%;
 }
 .meme-title:active{
@@ -56,25 +63,21 @@ body{
     border: none;
     background-image:url('./img/plus-30-rotate.png');
 }
-
 .meme-input{
     appearance: none;
 }
-
-
 .meme-input:checked ~ .meme-title{
     color: red;
     background-position:100%;
     border: none;
     background-image:url('./img/plus-30-rotate.png');
 }
-
-
-.meme-input:checked ~ .meme{
+.meme-input:checked ~ .meme > .meme-pic{
     height: 100%;
 }
-.meme-input:checked ~ .meme-item{
+.meme-input:checked ~ .meme-item:has(.meme-title){
     height: 50vh;
+    border:1px solid black;
 }
 
 
