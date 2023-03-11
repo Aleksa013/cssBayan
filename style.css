@@ -27,10 +27,9 @@ body{
     font-weight: 500;
     line-height: 2em;
     color:black;
-    border-bottom: 1px solid pink;
-    background-image: url('./img/plus-30.png');
+    background-image:url('./img/plus-30.png');
     background-repeat: no-repeat;
-    background-position:100%;
+    background-position:-30%;
 }
 .meme{
     padding-bottom: 3%;
@@ -39,15 +38,27 @@ body{
     height: 0%;
     border-bottom: 1px solid pink;
 }
+.meme-input{
+    appearance: none;
+}
 .meme > .meme-pic {
     margin-bottom: 5%;
     width: 80%;
     height: 0;
 }
-.meme-title:hover{
+.container:hover>.meme-item > .meme-title{
+    background-position:100%;
+    
+}
+.container:hover>.meme-item > .meme-input:checked ~ .meme-title{
+    color: red;
+    border: none;
+    background-image:url('./img/plus-30-rotate.png');
+}
+.meme-item:hover > label{
     color:red;
     border:none;
-    background-image:url('./img/plus-30-red.png');
+    background-image:url('./img/plus-30-rotate.png');
 }
 .meme-item:hover{
     height: 80vh;
@@ -63,18 +74,15 @@ body{
     border: none;
     background-image:url('./img/plus-30-rotate.png');
 }
-.meme-input{
-    appearance: none;
-}
 :is(.meme-item):has(.meme-input:checked ){
     height: 80vh; 
 }
-.meme-input:checked ~ .meme-title{
+/* .meme-input:checked ~ .meme-title{
     color: red;
     background-position:100%;
     border: none;
     background-image:url('./img/plus-30-rotate.png');
-}
+} */
 .meme-input:checked ~ .meme{
     height: 70vh;
 }
