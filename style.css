@@ -1,0 +1,230 @@
+body{
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    margin: 1% auto;
+    padding: 1% 1% 7%;
+    width: 80%;
+    background-color: bisque;
+}
+.header{
+   text-align: center;
+   font-size: 3em;
+   line-height: 2em;
+   font-weight: 700;
+}
+.meme-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 3em;
+    border-bottom: 0.1em solid pink; 
+    transition: 0.7s;
+}
+.meme-title{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em;
+    font-weight: 500;
+    line-height: 2em;
+    color: black;
+    background-image: url(./img/plus-30.png);
+    background-repeat: no-repeat;
+    background-position: -30%;
+    background-size: 4%;
+    flex-wrap: wrap;
+    
+ 
+}
+.text{
+    display: inline-block;
+    height: 0%;
+    margin: 0 50% 0 0;
+}
+.meme-input{
+    appearance: none;
+}
+.meme-pic {
+    margin: 5% auto;
+    width: 50%;
+    height: 0;
+    opacity: 0;
+    
+}
+.container:hover>.meme-item > .meme-title{
+    background-position:100% 5%;
+}
+.container:hover> .meme-item:active> .meme-title>.meme-pic{
+    filter:blur(0.3em);
+}
+.container:hover>.meme-item > .meme-input:checked ~ .meme-title{
+    color: red;
+    border: none;
+    background-image:url('./img/plus-30-rotate.png');
+    transform: 1s easy;
+}
+.meme-item:hover > .meme-title{
+    color:red;
+    border:none;
+    background-image:url('./img/plus-30-rotate.png');
+}
+.meme-item:hover{
+    height: 14em;
+    transition: 0.5s;
+}
+.meme-item:hover >.meme-title{
+    height: 14em;
+}
+.meme-item:hover > .meme-title > .meme-pic{
+    height: 70%;
+    width: 70%;
+    opacity: 1;
+    transition: 0.7s;
+}
+.meme-title:active{
+    color: red;
+    border: none;
+    background-image:url('./img/plus-30-rotate.png');
+}
+
+:is(.meme-item):has(.meme-input:checked ){
+    height: 14em; 
+    transition: 0.5s;
+}
+
+.meme-input:checked ~ .meme-title > .meme-pic{
+    height:60%;
+    width: 60%;
+    margin: 0 auto;
+    opacity: 1;
+}
+.meme-input:checked ~ .meme-title{
+    height: 14em;
+    color:red;
+    border:none;
+    background-image:url('./img/plus-30-rotate.png');
+   
+}
+
+@media(hover:hover){
+    .meme-item{
+        cursor: pointer;
+    }
+    
+}
+
+@media ( max-width: 1180px) and (min-width: 821px){
+    .container{
+        width: 100%;
+    }
+    .header{
+        text-align: center;
+        font-size: 3em;
+        line-height: 4em;
+        font-weight: 500;
+     }
+
+    .meme-title{
+        font-size: 2em;
+        font-weight: 300;
+        line-height: 2em;
+        background-position:100% 35%;
+    }
+    .meme-item{
+        height: 5em;
+    }
+    .text{
+        height: 0;
+        margin: 0 60% 0 0;
+    }
+    .container:hover>.meme-item > .meme-title {
+        background-position: 100% 5%;
+    }
+    .meme-item:hover{
+        height: 16em;
+    }
+    .meme-item:hover >.meme-title{
+        height: 16em;
+    }
+    .meme-item:hover > .meme-title > .text{
+        height: 0;
+    }
+    .meme-item:hover > .meme-title > .meme-pic{
+        height: 6em;
+        width: 30%;
+        opacity: 1;
+        transition: 0.7s;
+    }
+    .meme-input:checked ~ .meme-title > .text{
+        height: 0.5em;
+    }
+    .meme-input:checked ~ .meme-title > .meme-pic{
+        height: 6em;
+        width: 30%;
+        margin: 0 auto;
+        opacity: 1;
+    }
+    :is(.meme-item):has(.meme-input:checked ) {
+        height: 16em;
+        transition: 0.5s;
+}
+}
+
+@media ( max-width: 1920px) and (min-width: 1181px){
+    .container{
+     width: 100%;
+    }
+    .header{
+        text-align: center;
+        font-size: 3em;
+        line-height: 4em;
+        font-weight: 500;
+     }
+    .meme-item{
+        height: 5em;
+    }
+    .text{
+        height:0;
+    }
+    .meme-pic{
+        width: 60%;
+    }
+    .meme-title{
+        font-size: 2em;
+        font-weight: 700;
+        line-height: 2em;
+        color:white;
+    }
+    .meme-item:hover{
+        height: 22em;
+    }
+    .meme-item:hover >.meme-title{
+        height: 22em;
+    }
+    .meme-item:hover > .meme-title > .text{
+        height: 0;
+    }
+    .meme-item:hover > .meme-title > .meme-pic{
+        height: 9em;
+        width: 50%;
+        opacity: 1;
+        transition: 0.7s;
+    }
+    .meme-input:checked ~.meme-title{
+
+    }
+    .meme-input:checked ~ .meme-title > .text{
+        height: 1em;
+    }
+    .meme-input:checked ~ .meme-title > .meme-pic{
+        height: 9em;
+        width: 50%;
+        margin: 0 auto;
+        opacity: 1;
+    }
+    :is(.meme-item):has(.meme-input:checked ) {
+        height: 22em;
+        transition: 0.5s;
+    }
+}
