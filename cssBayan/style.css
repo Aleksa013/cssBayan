@@ -211,9 +211,6 @@ body{
         opacity: 1;
         transition: 0.7s;
     }
-    .meme-input:checked ~.meme-title{
-
-    }
     .meme-input:checked ~ .meme-title > .text{
         height: 1em;
     }
