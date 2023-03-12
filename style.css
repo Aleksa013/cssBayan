@@ -3,7 +3,7 @@ body{
 }
 .container{
     margin: 1% auto;
-    padding: 7% 1%;
+    padding: 1% 1% 7%;
     width: 80%;
     background-color: bisque;
 }
@@ -14,23 +14,24 @@ body{
    font-weight: 700;
 }
 .meme-item{
-    
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 10vh;
+    height: 15vh;
+    border-bottom: 0.1em solid pink; 
 }
 .meme-title{
     width: 80%;
     display: flex;
     justify-content: space-between;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 500;
     line-height: 2em;
     color: black;
     background-image: url(./img/plus-30.png);
     background-repeat: no-repeat;
     background-position: -30%;
+    background-size: 4%;
     flex-wrap: wrap;
  
 }
@@ -47,10 +48,12 @@ body{
     width: 50%;
     height: 0;
     opacity: 0;
-    transition: 0.7s;
 }
 .container:hover>.meme-item > .meme-title{
     background-position:100% 3%;
+}
+.container:hover> .meme-item:active> .meme-title>.meme-pic{
+    filter:blur(0.3em);
 }
 .container:hover>.meme-item > .meme-input:checked ~ .meme-title{
     color: red;
@@ -85,12 +88,7 @@ body{
 :is(.meme-item):has(.meme-input:checked ){
     height: 100vh; 
 }
-/* .meme-input:checked ~ .meme-title{
-    color: red;
-    background-position:100%;
-    border: none;
-    background-image:url('./img/plus-30-rotate.png');
-} */
+
 .meme-input:checked ~ .meme-title > .meme-pic{
     height: 60%;
     width: 80%;
@@ -100,10 +98,6 @@ body{
 .meme-input:checked ~ .meme-title{
     height: 100vh;
 }
-/* .meme-input:checked ~ .meme > .meme-pic{
-    height: 100%;
-    border: 2em solid pink;
-} */
 
 @media(hover:hover){
     .meme-item{
@@ -153,16 +147,14 @@ body{
         line-height: 4em;
         font-weight: 500;
      }
-    .meme{
-        width: 50%;
-     }
     .meme-pic{
         width: 60%;
      }
     .meme-title{
         font-size: 2em;
-        font-weight: 300;
+        font-weight: 700;
         line-height: 2em;
+        color:white;
     }
     .meme-item:hover > .meme-title > .meme-pic{
         height: 70%;
